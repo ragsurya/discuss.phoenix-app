@@ -45,6 +45,17 @@ defmodule DiscussWeb do
     end
   end
 
+  def model do
+    quote do
+      use Ecto.Schema
+
+      import Ecto
+      import Ecto.Changeset
+      import Ecto.Query
+    end
+  end
+
+
   def router do
     quote do
       use Phoenix.Router
